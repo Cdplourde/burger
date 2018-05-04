@@ -1,7 +1,7 @@
 // Dependencies 
 var mysql = require("mysql");
 
-// Set up mysql connection
+// Set up DB connection
 var connection = mysql.createConnection({
     port: 3306,
     host: "localhost",
@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     database: "burgers_db"
 });
 
-// Make connection.
+// Make connection to DB.
 connection.connect(function(err) {
     if (err) {
       console.error("error connecting: " + err.stack);
